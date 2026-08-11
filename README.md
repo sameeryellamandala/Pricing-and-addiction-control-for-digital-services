@@ -51,6 +51,28 @@ graph TD
     classDef out fill:#fff3e0,stroke:#ff9800,stroke-width:2px;
 
 
+
+sequenceDiagram
+    participant User
+    participant Sidebar (React State)
+    participant Math Engine (useEffect)
+    participant Chart.js (Canvas)
+    
+    User->>Sidebar: Adjusts slider (e.g., Price Sensitivity η)
+    Sidebar->>Math Engine: State update triggers dependency array
+    
+    rect rgb(240, 248, 255)
+        Note over Math Engine: Algorithm Execution
+        Math Engine->>Math Engine: 1. Validate α < 1 (Convergence Check)
+        Math Engine->>Math Engine: 2. Calculate baseline β & equilibrium s*
+        Math Engine->>Math Engine: 3. Compute target A_th for 5 strategies
+        Math Engine->>Math Engine: 4. Derive recovery time (t) safely (Math.log)
+    end
+    
+    Math Engine->>Chart.js: Inject updated t vs p arrays
+    Chart.js->>User: Re-renders graphical curves instantly
+
+
     
     class M,Z,N,L,P,S0 var;
     class Consump,State,Alpha,Beta eq;
