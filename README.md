@@ -42,10 +42,8 @@ sequenceDiagram
     
     Math Engine->>Chart.js: Inject updated t vs p arrays
     Chart.js->>User: Re-renders graphical curves instantly
-Parameter Relations & Core Formulas
-The flowchart below illustrates how the primitive behavioral variables drive the steady-state equilibrium and ultimately determine the recovery time.
 
-Code snippet
+
 graph TD
     %% Variables
     M[Persistence: μ] --> Alpha
@@ -64,7 +62,7 @@ graph TD
     Alpha --> Time
     
     %% Thresholds
-    Thresh[Threshold Strategy: A_th] --> Time[Recovery Time: t = ln([A_th - s*] / [s₀ - s*]) / ln(α)]
+    Thresh[Threshold Strategy: A_th] --> Time[Recovery Time: t = ln(A_th - s* / s₀ - s*) / ln α]
     
     classDef var fill:#e1f5fe,stroke:#03a9f4,stroke-width:2px;
     classDef eq fill:#e8f5e9,stroke:#4caf50,stroke-width:2px;
