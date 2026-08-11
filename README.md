@@ -42,32 +42,3 @@ sequenceDiagram
     
     Math Engine->>Chart.js: Inject updated t vs p arrays
     Chart.js->>User: Re-renders graphical curves instantly
-
-
-graph TD
-    %% Variables
-    M[Persistence: μ] --> Alpha
-    Z[Habit: ζ] --> Alpha
-    N[Sensitivity: η] --> Alpha
-    L[Utility: λ] --> Beta
-    P[Price: p] --> Beta
-    S0[Initial State: s₀] --> Time
-    
-    %% Core Reductions
-    Alpha[Habit Rate: α = μ(1 + ζ/η)] --> Eq
-    Beta[Baseline Intake: β = μ(λ - p)/η] --> Eq
-    
-    %% Equilibrium & Time
-    Eq[Steady State: s* = β / (1 - α)] --> Time
-    Alpha --> Time
-    
-    %% Thresholds
-    Thresh[Threshold Strategy: A_th] --> Time[Recovery Time: t = ln(A_th - s* / s₀ - s*) / ln α]
-    
-    classDef var fill:#e1f5fe,stroke:#03a9f4,stroke-width:2px;
-    classDef eq fill:#e8f5e9,stroke:#4caf50,stroke-width:2px;
-    classDef out fill:#fff3e0,stroke:#ff9800,stroke-width:2px;
-    
-    class M,Z,N,L,P,S0 var;
-    class Alpha,Beta,Eq eq;
-    class Time,Thresh out;
