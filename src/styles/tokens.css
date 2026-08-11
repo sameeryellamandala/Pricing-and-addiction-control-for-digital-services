@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+
+:root {
+  /* Color Roles - Curated High Contrast Harmonious Palette */
+  --color-dynamic: #38bdf8;        /* Vivid blue-sky for dynamic pricing */
+  --color-dynamic-bg: rgba(56, 189, 248, 0.1);
+  --color-fixed: #f59e0b;          /* Amber for fixed pricing */
+  --color-fixed-bg: rgba(245, 158, 11, 0.1);
+  --color-success: #10b981;        /* Emerald for positive metrics (Arrows up, badges) */
+  --color-success-bg: rgba(16, 185, 129, 0.15);
+  --color-danger: #ef4444;         /* Soft ruby red for assumption violations/worst badges */
+  --color-danger-bg: rgba(239, 68, 68, 0.15);
+  --color-neutral: #9ca3af;        /* Gray for helper details */
+  --color-neutral-dark: #6b7280;
+
+  /* Theme Backgrounds (Bloomberg Scientific Dark Mode) */
+  --color-bg-base: #090d16;        /* Deep space black-blue base background */
+  --color-bg-panel: #111827;       /* Off-black panel backgrounds */
+  --color-bg-card: #1f2937;        /* Lighter dark gray for cards */
+  --color-bg-input: #111827;       /* Dark slider tracks */
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-active: rgba(56, 189, 248, 0.3);
+
+  /* Text Colors */
+  --color-text-main: #f3f4f6;      /* Off-white */
+  --color-text-muted: #9ca3af;     /* Cool gray */
+  --color-text-subtle: #6b7280;    /* Dark gray for labels */
+
+  /* Typography */
+  --font-serif: 'IBM Plex Serif', 'Georgia', serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+  /* Sizing and Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base resets & styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-main);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--color-text-main);
+}
