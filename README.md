@@ -1,4 +1,4 @@
-# 📉 Digital Addiction , deaddiciton & Pricing Control Simulator
+# 📉 Digital Addiction , deaddiction & Pricing Control Simulator
 
 [![React](https://img.shields.io/badge/React-19.0-blue.svg)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-8.0-646CFF.svg)](https://vitejs.dev/)
